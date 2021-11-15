@@ -283,11 +283,11 @@ let sampleTrue = [0, 1, 2, 3];
 
 //CODE HERE
 function ascOrder(array){
-	for(let i = 0; i < array.length + 1; i++){
-		if(array[i] < array[i] + 1)
-			return true;
-		else return false;
+	for(let i = 0; i < array.length; i++){
+		if(array[i] > array[i+1])
+			return false; //check for false first
 	}
+	return true; //if entire array in order, return true
 }
 let arrayIsAscending = ascOrder(sampleArray);
 console.log(arrayIsAscending);
